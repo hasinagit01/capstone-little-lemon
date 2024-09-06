@@ -1,0 +1,37 @@
+.hero-section {
+    background: var(--primaryColor);
+    margin-bottom: 40px;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--containerGap);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image {
+    margin-bottom: -60px;
+}
+
+.hero-image--no-margin {
+    margin: 0;
+}
+
+@media screen and (max-width: 740px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: var(--mobileGap);
+    }
+
+    .hero-image {
+        margin: 0;
+    }
+
+    .heroDetails {
+        display: grid;
+        height: 100%;
+    }
+}

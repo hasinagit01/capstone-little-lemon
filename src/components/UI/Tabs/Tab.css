@@ -1,0 +1,33 @@
+/* Tabs.css */
+.tab {
+    background: var(--primaryColor);
+    color: white;
+    border: none;
+    font-family: var(--karla);
+    font-weight: bold;
+    font-size: 15pt;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+.tab.active {
+    background: transparent;
+    color: var(--primaryColor);
+}
+
+.tab:first-child {
+    border-radius: 16px 0 0 0;
+}
+
+.tab:last-child {
+    border-radius: 0 16px 0 0;
+}
+
+.tab-content {
+    padding: 16px;
+}

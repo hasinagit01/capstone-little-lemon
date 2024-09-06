@@ -1,13 +1,247 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500;600;700&display=swap');
+
+:root {
+  --primaryColor: #495E57;
+  --secondaryColor: #F4CE14;
+  --greyColor: #E3E3E3;
+  --redColor: #f80623;
+  --costColor: #FF5C00;
+  --whiteColor: #edefee;
+  --karla: 'Karla', sans-serif;
+  --markazi: 'Markazi Text', serif;
+  --margin: 0 20px 0 20px;
+  --max-width: 1024px;
+  --containerGap: 40px;
+  --mobileGap: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+}
+
+/* Containers */
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: var(--max-width);
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.primary-background {
+  background: var(--primaryColor);
+}
+
+/* Properties for text */
+h1 {
+  font-family: var(--markazi);
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--secondaryColor);
+  margin: 0;
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-family: var(--markazi);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--primaryColor);
+  margin: 0;
+}
+
+h3 {
+  color: var(--secondaryColor);
+  font-family: var(--markazi);
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--primaryColor);
+  margin: 0;
+}
+
+p {
+  font-family: var(--karla);
+  font-size: 16px;
+  color: var(--primaryColor);
+  line-height: 24px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+
+/* text color */
+.text-yellow {
+  color: var(--secondaryColor);
+}
+
+.text-white {
+  color: var(--whiteColor);
+}
+
+.text-green {
+  color: var(--primaryColor);
+}
+
+/** MAIN **/
+.page-main-image {
+  justify-self: end;
+  object-fit: cover;
+  width: 100%;
+  height: 340px;
+  border-radius: 16px;
+}
+
+/** BUTTON **/
+.btn-primary {
+  background: var(--greyColor);
+  color: var(--primaryColor);
+  font-family: var(--karla);
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  margin-top: 20px;
+  width: 180px;
+  height: 50px;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover:hover {
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+  transition: .2s ease;
+}
+
+.right-button {
+  position: absolute;
+  right: 0;
+}
+
+/* CARD BASE STYLE */
+.card {
+  display: grid;
+  background: var(--whiteColor);
+  border-radius: 16px;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1.2;
+  margin: auto;
+}
+
+.cardTitle {
+  font-family: var(--karla);
+  font-size: 16pt;
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+
+.costText {
+  color: var(--costColor);
+  font-family: var(--karla);
+  font-size: 14pt;
+  font-weight: regular;
+}
+
+.error{
+  font-family: var(--karla);
+  color: var(--redColor);
+  font-size: 14px;
+}
+
+/** HIGHLIGTHS **/
+.highlights {
+  grid-template-rows: auto auto;
+}
+
+.highlights-head {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+
+/** MENU PAGE **/
+.menu-top {
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.menu-head {
+  background: var(--primaryColor);
+  margin-bottom: 40px;
+}
+
+.menuPart {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.menuPartTitle {
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cart-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 24px;
+}
+
+
+/* media queries */
+@media screen and (max-width:840px) {
+  .menu-list {
+      grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .menu-list {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .menu-top {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+  }
+
+  .menu-main-image {
+      margin-bottom: 0;
+  }
+
+  .menu-head {
+      margin-bottom: 0px;
+  }
+
 }
