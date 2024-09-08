@@ -12,7 +12,7 @@ const OrderList = () => {
   
   
     return (
-      <div className='profile-item-card-list'>
+      <section className='profile-item-card-list'>
          {orders.map((order, index) => (
           <OrderCard
             key={index}
@@ -21,7 +21,7 @@ const OrderList = () => {
             onCancel={cancelOrder}
           />
         ))}
-      </div>
+      </section>
     )
   };
 

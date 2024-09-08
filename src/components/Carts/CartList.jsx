@@ -12,7 +12,7 @@ const CartList = () => {
     
   
     return (
-      <div className='profile-item-card-list'>
+      <section className='profile-item-card-list'>
          {carts.map((cart, index) => (
           <CartCard
             key={index}
@@ -22,7 +22,7 @@ const CartList = () => {
             onCancel={cancelCart}
           />
         ))}
-      </div>
+      </section>
     )
   };
 

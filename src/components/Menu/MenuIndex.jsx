@@ -42,16 +42,16 @@ const ContentMenu = () => {
       <div className="container grid-container">
         <div className="menuPart">
           {Object.keys(categorizedMenu).map((category) => (
-            <div key={category}>
-              <div className="menuPartTitle">
+            <section key={category}>
+              <header className="menuPartTitle">
                 <h2>{category}</h2>
-              </div>
+              </header>
               <div className="menu-list">
                 {categorizedMenu[category].map((item) => (
                   <DishCard key={item.id} item={item} />
                 ))}
               </div>
-            </div>
+            </section>
           ))}
         </div>
       </div>

@@ -20,7 +20,7 @@ const Tabs = ({ tabs, defaultTab, children }) => {
     return (
         <section className="section">
             <div className="container">
-                <div className='profile-action-box'>
+                <nav className='profile-action-box'>
                     <div className='profile-action'>
                         {tabs.map(tab => (
                             <Button
@@ -35,11 +35,11 @@ const Tabs = ({ tabs, defaultTab, children }) => {
                     <div className="tab-content">
                         {tabContents[activeIndex]}
                     </div>
-                </div>
-                <div>
+                </nav>
+                <aside>
                     {(activeTab === "Carts" && carts.length > 0) && <CartTotal cartItems={carts} />}
                     {(activeTab === "Orders" && orders.length > 0) && <CartTotal cartItems={orders} />}
-                </div>
+                </aside>
             </div>
         </section>
     );

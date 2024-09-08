@@ -8,7 +8,7 @@ const NavMenu = ({ onClick }) => {
   const { carts } = useContext(CartContext);
 
   return (
-    <menu className='nav-menu'>
+    <ul className='nav-menu'>
       <NavItem to="/" onClick={onClick}>Home</NavItem>
       <NavItem to="/menu" onClick={onClick}>Menu</NavItem>
       <NavItem to="/booking" onClick={onClick}>Reservation</NavItem>
@@ -25,7 +25,7 @@ const NavMenu = ({ onClick }) => {
           </>
         )}
       </NavItem>
-    </menu>
+    </ul>
   );
 };
 

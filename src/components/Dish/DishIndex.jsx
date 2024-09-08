@@ -6,7 +6,7 @@ import SkeletonLoaderDish from "../Skeletons/SkeletonLoaderDish";
 
 import DishCard from "./DishCard";
 
-const Dish = () => {
+const DishIndex = () => {
   const [menuData, setMenuData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -42,12 +42,12 @@ const Dish = () => {
     <>
       <section className="section">
         <div className="container grid-container highlights">
-          <div className="highlights-head">
+          <header className="highlights-head">
             <h2>Special holiday offer!</h2>
             <Link to="/menu">
               <Button className="btn-primary">Order Online</Button>
             </Link>
-          </div>
+          </header>
           <div className="menu-list">
             {menuData.map((item) => (
               <DishCard key={item.id} item={item} />
@@ -59,4 +59,4 @@ const Dish = () => {
   );
 };
 
-export default Dish;
+export default DishIndex;

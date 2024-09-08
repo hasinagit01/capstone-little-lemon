@@ -6,7 +6,7 @@ import { BookingContext } from "../../context/BookingContext";
 import Button from "../UI/Buttons/Button";
 import DialogConfirm from "../UI/Dialogs/DialogConfirm";
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes }) => {
   const { addBooking } = useContext(BookingContext);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -81,7 +81,9 @@ const BookingForm = () => {
   return (
     <section className="section">
       <div className="container">
-        <div><h1>Reservation</h1></div>
+        <header>
+          <h1>Reservation</h1>
+        </header>
         <div className="reservation-form-container">
           <form
             className="reservation-form-box-container"
@@ -144,27 +146,7 @@ const BookingForm = () => {
                 name="time"
                 value={formData.time}
                 onChange={handleChange}
-                options={[
-                  "12:00 PM",
-                  "12:30 PM",
-                  "1:00 PM",
-                  "1:30 PM",
-                  "2:00 PM",
-                  "2:30 PM",
-                  "3:00 PM",
-                  "3:30 PM",
-                  "4:00 PM",
-                  "4:30 PM",
-                  "5:00 PM",
-                  "5:30 PM",
-                  "6:00 PM",
-                  "6:30 PM",
-                  "7:00 PM",
-                  "7:30 PM",
-                  "8:00 PM",
-                  "8:30 PM",
-                  "9:00 PM",
-                ]}
+                options={availableTimes}
                 error={errors.time}
                 disabled={!formData.date}
               />
@@ -188,7 +170,9 @@ const BookingForm = () => {
               />
             </div>
             <div className="reservation-form-submit-btn-box">
-              <Button className="reservation-form-submit-btn">Make your reservation</Button>
+              <Button className="reservation-form-submit-btn">
+                Make your reservation
+              </Button>
             </div>
           </form>
         </div>

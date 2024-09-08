@@ -10,7 +10,7 @@ const BookingList = () => {
     return <ShowEmptyForProfile viewOption={'reservations'}/>
   }
   return (
-    <div className='profile-item-card-list'>
+    <section className='profile-item-card-list'>
        {bookings.map((booking, index) => (
         <BookingCard
           key={index}
@@ -19,7 +19,7 @@ const BookingList = () => {
           onCancel={cancelBooking}
         />
       ))}
-    </div>
+    </section>
   )
 };
 

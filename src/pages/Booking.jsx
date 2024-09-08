@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHero } from "../hooks/useHero";
 import heroImage from "../assets/table3.jpeg";
 import BookingForm from "../components/Bookings/BookingForm";
-import  "../components/Bookings/Booking.css"
+import "../components/Bookings/Booking.css";
 
 const paramsHero = {
   heading: "Make Your Reservation Today!",
@@ -17,12 +17,21 @@ const paramsHero = {
 const Booking = () => {
   const { setHeroParams } = useHero();
 
+  const [availableTimes, setAvailableTimes] = useState([
+    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
+    "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM",
+    "6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM",
+    "9:00 PM"
+  ]);
+
   useEffect(() => {
     setHeroParams(paramsHero);
   }, [setHeroParams]);
-  return <div className="mainSection">
-    <BookingForm />
-  </div>;
+  return (
+    <main className="mainSection">
+      <BookingForm availableTimes={availableTimes} />
+    </main>
+  );
 };
 
 export default Booking;

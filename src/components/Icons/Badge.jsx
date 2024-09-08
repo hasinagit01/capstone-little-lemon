@@ -1,10 +1,12 @@
-import React from 'react';
-import './Badge.css'; 
+import React from "react";
+import "./Badge.css";
 
 const Badge = ({ count }) => {
   return (
     <div className="icon-container">
-      <span className="badge">{count}</span>
+      <span className="badge" aria-label={`Notifications count: ${count}`}>
+        {count}
+      </span>
     </div>
   );
 };

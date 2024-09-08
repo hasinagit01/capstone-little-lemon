@@ -14,12 +14,14 @@ const DishCard = ({ item }) => {
   return (
     <>
       <Card className="dishCard">
-        <img className="dishImage" src={item.dishImage} alt={item.dishName} />
+        <figure>
+          <img className="dishImage" src={item.dishImage} alt={item.dishName} />
+        </figure>
         <div className="dish-details">
-          <div className="dish-title-cost-box">
-            <span className="cardTitle">{item.dishName}</span>
+          <header className="dish-title-cost-box">
+            <h3 className="cardTitle">{item.dishName}</h3>
             <span className="costText">$ {item.dishPrice}</span>
-          </div>
+          </header>
           <p className="paragraphText">{item.dishDetails}</p>
         </div>
         <div className="delivery-btn-box">

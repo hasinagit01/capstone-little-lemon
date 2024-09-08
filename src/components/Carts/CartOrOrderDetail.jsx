@@ -1,23 +1,19 @@
 import React from "react";
 
 const CartOrOrderDetail = ({ dishName, quantity, dishPrice }) => (
-    <div className='profile-item-card-detail-box'>
-    <div>
+  <section className="profile-item-card-detail-box">
+    <header>
       <span className="cardTitle">{dishName}</span>
-    </div>
+    </header>
     <div>
-      <span className='profile-item-card-qty'> Qty. {quantity}</span>
+      <span className="profile-item-card-qty"> Qty. {quantity}</span>
     </div>
-    <div className='cart-price-box'>
-      <span className='costText DishCost'>
-        $ {
-          (parseFloat(dishPrice)
-            * parseFloat(quantity)).toFixed(2)
-        }
+    <footer className="cart-price-box">
+      <span className="costText DishCost">
+        $ {(parseFloat(dishPrice) * parseFloat(quantity)).toFixed(2)}
       </span>
-    </div>
-  </div>
+    </footer>
+  </section>
 );
 
 export default CartOrOrderDetail;
-        

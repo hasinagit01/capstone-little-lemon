@@ -6,7 +6,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <section className="section">
+    <header className="section">
       <div className="grid-container header-container">
         <div className="header-img-container">
           <Link to="/">
@@ -15,7 +15,7 @@ const Header = () => {
         </div>
         <Nav />
       </div>
-    </section>
+    </header>
   );
 };
 

@@ -8,6 +8,11 @@
   transition: .4s ease;
 }
 
+.dishCard figure {
+  margin: 0; 
+  padding: 0; 
+}
+
 .dishCard:hover {
   background: rgb(174, 174, 174);
   transition: .4s ease;

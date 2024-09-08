@@ -23,7 +23,7 @@ const DialogConfirm = ({
                     <h2 className="lead-order-action-complete-text">{title}</h2>
                     <p className="order-action-complete-text-box-para">{message}</p>
                 </div>
-                <div className="modal-footer">
+                <footer className="modal-footer">
                     {onPrimaryAction && (
                         <Button
                             className="order-card-btn order-card-btn-left"
@@ -40,7 +40,7 @@ const DialogConfirm = ({
                             {secondaryActionLabel}
                         </Button>
                     )}
-                </div>
+                </footer>
         </Modal>
     );
 }

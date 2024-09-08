@@ -19,9 +19,9 @@ const Profile = () => {
     setHeroParams(paramsHero);
   }, [setHeroParams]);
   return (
-    <div className="mainSection">
+    <main className="mainSection">
       <ProfileIndex />
-    </div>
+    </main>
   );
 };
 

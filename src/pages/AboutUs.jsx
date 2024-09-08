@@ -19,9 +19,9 @@ const AboutUs = () => {
   }, [setHeroParams]);
 
   return (
-    <div className="mainSection">
+    <main className="mainSection">
       <AboutUsIndex />
-    </div>
+    </main>
   );
 };
 

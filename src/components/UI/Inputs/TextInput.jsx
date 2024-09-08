@@ -7,8 +7,9 @@ const TextInput = ({ label, type, name, value, onChange, error, ...props }) => {
         {label}
       </label>
       <input
-        className='reservation-form-input'
+        className="reservation-form-input"
         type={type}
+        id={name}
         name={name}
         value={value}
         onChange={onChange}

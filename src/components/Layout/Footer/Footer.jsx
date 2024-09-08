@@ -15,7 +15,7 @@ const scrollToTop = () => {
 const Footer = () => {
   return (
     <>
-      <section className="primary-background section">
+      <footer className="primary-background section">
         <div className="container footer">
           <img className="footer-logo" src={footerImage} alt="footer-image" />
           <div>
@@ -91,8 +91,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="primary-background section">
+      </footer>
+      <footer className="primary-background section">
         <div className="container github-container">
           <h2 className="text-white">Hey!</h2>
           <p className="text-white github-container-para">
@@ -114,7 +114,7 @@ const Footer = () => {
             <span>{"<=="}</span>
           </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 };
