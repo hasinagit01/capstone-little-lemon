@@ -5,7 +5,7 @@ import Footer from "../Layout/Footer/Footer";
 import Hero from "../Sections/Hero";
 import MainRoutes from "../../routes/MainRoutes";
 
-const MainLayout = ({ children }) => {
+const MainLayout = () => {
   const { heroParams } = useHero();
   return (
     <div className="app">
