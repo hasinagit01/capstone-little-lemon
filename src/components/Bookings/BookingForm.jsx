@@ -181,7 +181,7 @@ const BookingForm = ({ availableTimes }) => {
             isOpen={showSuccessModal}
             onClose={handleCloseModal}
             title="Thank You for Reservation.."
-            message="Your reservation has been confirmed check your email or you can see your Reservations in your profile."
+            message="Your reservation has been confirmed check your email and you can see your Reservations in your profile."
             onPrimaryAction={handleGoToProfile}
             primaryActionLabel="Go to reservation"
             onSecondaryAction={handleCloseModal}
